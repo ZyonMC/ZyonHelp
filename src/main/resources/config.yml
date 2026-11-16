@@ -1,0 +1,58 @@
+# ==========================================
+# ZyonHelp - Configuración de Tickets Híbridos
+# Desarrollado por Sebastian Cheikh (SrCode)
+# Discord: sebastiancheikh
+# ==========================================
+
+# Datos de Conexión (Discord Developer Portal)
+discord-bot:
+  enabled: true
+  token: "your-token-here"
+  guild-id: "your-guild-id-here"
+  category-id: "your-category-id-here"
+  # ID del Rol de Staff que podrá ver y escribir en los tickets
+  staff-role-id: "your-role-id-here"
+
+# Conexión MySQL Database
+# Para tickets persistentens ante reinicios.
+mysql:
+  enabled: false
+  host: "localhost"
+  port: 3306
+  database: "zyonhelp"
+  username: "root"
+  password: ""
+
+# Transcripciones
+transcripts:
+  enabled: true
+  # true = guarda txt local en carpeta transcripts/
+  save-local: true
+
+# Formatos de Mensajes
+messages:
+  prefix: "<white><cyan><bold>Zyon</bold> <white><bold>Help</bold> <dark_gray>» <gray><white>"
+  ticket-closed: "<white><red>Ticket cerrado correctamente. El canal de Discord ha sido eliminado.<white>"
+  
+  # Cómo se ve en Minecraft
+  format-helpop-to-staff: "<white><aqua>[Helpop] <white>{player}: <gray>{message}<white>"
+  format-mc-staff: "<white><light_purple>[Staff MC] <white>{author}: <gray>{message}<white>"
+  format-discord-staff: "<white><blue>[Staff Discord] <white>{author}: <gray>{message}<white>"
+  format-staff-reply-to-staff: "<white><green>[Reply TO {player}] <white>{author}: <gray>{message}<white>"
+  
+  # Cómo se ve en Discord
+  format-to-discord: "**[Minecraft] {player}:** {message}"
+  format-reply-to-discord: "**[Respuesta Staff MC] {staff}:** {message}"
+
+# Ajustes Generales
+options:
+  # Permiso para ver y responder tickets en MC
+  staff-permission: "zyonhelp.staff"
+  # Eliminar canal de Discord al cerrar el ticket
+  delete-on-close: true
+
+# Inactividad
+inactivity:
+  enabled: true
+  wait-time: 5 # en minutos
+  message: "<white><red>Tu helpop ha sido cerrado debido a inactividad.<white>"
