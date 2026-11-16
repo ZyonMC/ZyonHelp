@@ -1,0 +1,18 @@
+name: ZyonHelp
+version: '1.0-SNAPSHOT'
+main: net.zyonmc.zyonhelp.ZyonHelp
+api-version: '1.21'
+authors: [ Sebastian Cheikh ]
+description: A plugin help for players with connection to discord
+website: https://sebastiancheikh.com
+
+commands:
+  helpop:
+    description: Solicitar ayuda al staff
+    usage: /helpop <mensaje>
+    permission: zyonhelp.helpop
+    permission-message: "\u00a7cNo tienes permiso para usar este comando."
+  zyonhelp:
+    description: Comando principal del plugin
+    usage: /zyonhelp <reload>
+    permission: zyonhelp.admin
